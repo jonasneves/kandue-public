@@ -1,21 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
 <!--
-  The family mark is the students cap alone: the graders icon
-  (graders/store/brand/cap-check.svg) is this cap faded under a check badge, so
-  the cap already names both items.
+  The family mark is a K, where each product icon is a cap: a cap here made the
+  students icon read as the site's and graders as its guest.
 
-  It is measured off students/icon-128.png, so it is the shipped cap and not
-  a redraw (a luminance level lifted off the raster read its antialiased edges as
-  partial alpha, so it is vector):
-
-    board      rhombus, apex (63,33), widest row y=54 spanning x 18..108,
-               bottom point (63,75)
-    bowl       top edge is the board's lower edges dropped 5, walls at x 41
-               and 85, floor reaching y 91 at centre
-    rim        the outer hairline, y 72..86 at x 36..38 and mirrored, floor
-               at y 94
-    tassel     cord x 100 from the board's lower-right edge, bead, fringe
-               widening to x 96..104 by y 91
+  The glyph is a path, not text, so no installed font changes it. It spans
+  y 32..96, the caps' height (33..94), so the three read as one set.
 
   The red is #A3111F, the one both store icons ship on, so the mark and the
   two icons beside it on the link-preview card are one red. It is the cap
@@ -24,13 +13,5 @@
   looked duller. Icons here are untagged sRGB.
 -->
   <rect x="1" y="1" width="126" height="126" rx="28" fill="#A3111F"/>
-  <path fill="#fff" stroke="#A3111F" stroke-width="12" stroke-linejoin="round" paint-order="stroke"
-        d="M63 33 L108 54 L63 75 L18 54 Z"/>
-  <path fill="#fff" stroke="#A3111F" stroke-width="12" paint-order="stroke"
-        d="M41 70 L63 80 L85 70 L85 81 C85 88.5 75.5 91.5 63 91.5 C50.5 91.5 41 88.5 41 81 Z"/>
-  <path fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
-        d="M37 72 V84 C37 90.5 48.5 94 63 94 C77.5 94 89 90.5 89 84 V72"/>
-  <path fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" d="M100 58 V76"/>
-  <ellipse fill="#fff" cx="100" cy="79.5" rx="2.3" ry="3.6"/>
-  <path fill="#fff" d="M97.8 83 L102.2 83 L103.8 88.6 C103.8 91.4 96.2 91.4 96.2 88.6 Z"/>
+  <path fill="#fff" d="M34 32 H51 V59 L75 32 H94 L67 61 L96 96 H76 L56 69 L51 74.5 V96 H34 Z"/>
 </svg>
