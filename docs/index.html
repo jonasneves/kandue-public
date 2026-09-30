@@ -154,26 +154,9 @@
         .product-head .who { color: var(--muted); font-weight: 600; font-size: 0.95rem; }
         /* The accent has to survive the head band scrolling off, or the page has
            nothing below it saying which product's screenshots these are. It
-           carries into every badge, step and screenshot field inside the run. */
-        #students { --accent: var(--students); --accent-2: #C0303D; }
-        #graders  { --accent: var(--graders);  --accent-2: #3E82DD; }
-        .product .feature .badge,
-        .product .step-badge { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%); }
-        .product .step { border-left-color: var(--accent); }
-
-        /* ── Features ─────────────────────────────────────────── */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
-        .feature {
-            background: var(--card); border: 1px solid var(--line);
-            border-radius: 12px; padding: 1.5rem;
-        }
-        .feature .badge {
-            width: 42px; height: 42px; border-radius: 10px; background: var(--grad);
-            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
-        }
-        .feature .badge svg { width: 21px; height: 21px; color: #fff; }
-        .feature h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--ink); }
-        .feature p { color: var(--muted); font-size: 0.96rem; }
+           carries into every screenshot field inside the run. */
+        #students { --accent: var(--students); }
+        #graders  { --accent: var(--graders); }
 
         /* ── Screenshots ──────────────────────────────────────── */
         /* The capture fills a tinted field and runs off the bottom of it, instead
@@ -211,26 +194,6 @@
         .shot img { width: 100%; height: auto; max-width: 320px; border-radius: 9px; border: 1px solid var(--line); box-shadow: 0 8px 20px -10px rgba(0,0,0,0.2); }
         .shot h4 { font-size: 1.05rem; font-weight: 700; margin: 1rem 0 0.3rem; }
         .shot p { color: var(--muted); font-size: 0.92rem; }
-
-        /* ── Install ──────────────────────────────────────────── */
-        .steps { display: grid; gap: 1.2rem; }
-        .step {
-            background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--navy);
-            border-radius: 10px; padding: 1.5rem;
-        }
-        .step h4 { display: flex; align-items: center; gap: 0.7rem; font-size: 1.1rem; margin-bottom: 0.7rem; }
-        .step-badge {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 28px; height: 28px; background: var(--grad); color: #fff;
-            border-radius: 7px; font-size: 0.85rem; font-weight: 800; flex-shrink: 0;
-        }
-        .step ol { margin-left: 1.25rem; color: #374151; }
-        .step ol li { margin-bottom: 0.35rem; }
-        .step code {
-            background: var(--bg); padding: 0.15rem 0.45rem; border-radius: 5px;
-            font-family: ui-monospace, 'SF Mono', Monaco, monospace; font-size: 0.85rem;
-            color: var(--navy); border: 1px solid var(--line);
-        }
 
         .faq { display: grid; gap: 0.75rem; }
         .faq details { border: 1px solid #e5e7eb; border-radius: 10px; background: #fff; }
@@ -338,60 +301,14 @@
 
             <section class="section">
                 <h3>Canvas scatters your deadlines. Kandue gathers them.</h3>
-                <p class="sub">Assignments sit in different courses and modules, across however many tabs you have open. Kandue reads them through Canvas's own API on your logged-in session (no API key, no password) and puts what's due in one place you can open on any page.</p>
-                <div class="features">
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"></rect><rect x="14" y="3" width="7" height="5" rx="1"></rect><rect x="14" y="12" width="7" height="9" rx="1"></rect><rect x="3" y="16" width="7" height="5" rx="1"></rect></svg></div>
-                        <h4>One deadline dashboard</h4>
-                        <p>Overdue, due today, and coming up across every course, sorted by what needs you first.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
-                        <h4>Ranked priorities</h4>
-                        <p>Your week's work ordered by what matters first, each with a reason. Computed in the panel with no waiting.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                        <h4>Practice quizzes</h4>
-                        <p>Turn a course, an assignment, or the page you're reading into a quiz that makes you commit to an answer before revealing the right one. Written by Chrome's built-in AI on your own computer, from your material rather than a question bank.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6"></path><path d="M4 14l6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="M22 22l-5-10-5 10"></path><path d="M14 18h6"></path></svg></div>
-                        <h4>Long posts, shorter or in your language</h4>
-                        <p>Instructors write long. Get the key points of an announcement or an assignment brief, or read either one translated into your own language. Both run on Chrome's built-in AI, on your machine.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.17L4 17.17V4z"></path><line x1="8" y1="9" x2="16" y2="9"></line></svg></div>
-                        <h4>In Canvas's own nav</h4>
-                        <p>Adds itself to Canvas's left nav with a badge counting what needs attention, so there's no extra app to open.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                        <h4>No Kandue server</h4>
-                        <p>Your school's Canvas is the only server Kandue contacts. There is no backend of ours and no account to create: assignments are read straight into your browser and stay there, ranking happens in the extension, and quizzes are written by Chrome's own AI model on your computer.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h3>See it</h3>
-                <p class="sub">A panel that sits beside the page you're on, or over it if you'd rather. Read your deadlines, see what to start, and quiz yourself without leaving Canvas. Fictional courses, invented instructors: nothing in these captures comes from a real Canvas course.</p>
-
+                <p class="sub">Assignments from every course in one panel you can open beside any page, read over the Canvas session you are signed in to. Quizzes, summaries and translations are written by Chrome's built-in AI on your own computer.</p>
                 <div class="shot-feature">
                     <!-- ?v= is the edge cache key (see the brand mark): these files were
                          replaced in place, and Cloudflare holds them for four hours. -->
                     <div class="shot-media"><img src="ss1.png?v=17" width="1120" height="946" alt="The Kandue panel, headed by an All courses switch and a search button: a ring of 2 due, 0 overdue and 2 due this week, a Next up button naming Assignment 4: Linear Regression, due in 3 days, then that assignment marked Critical and a reading response, each ending in a chip saying when it is due, and buttons for Later, No due date and Announcements with 1 new" loading="lazy" decoding="async"></div>
                     <div class="shot-copy">
-                        <h4>Everything due, in one place</h4>
-                        <p>Overdue, due today and coming up, counted across every course, with this week's announcements above the list, each one carrying the colour of the course it is about.</p>
-                    </div>
-                </div>
-
-                <div class="shot-feature">
-                    <div class="shot-media"><img src="ss-priorities.png?v=17" width="560" height="476" alt="The Kandue assignment queue: a ring of 3 due, 1 overdue and 2 due this week, a Next up button naming the lab that is 1 day late, then that lab under Overdue with a red 1 day late chip, and a midterm exam and a reading under This week with amber Due in 6 days and Due in 5 days chips" loading="lazy" decoding="async"></div>
-                    <div class="shot-copy">
-                        <h4>Know what to start</h4>
-                        <p>Your week ranked by what actually matters first, each task with one line on why it's there.</p>
+                        <h4>Everything due, ranked</h4>
+                        <p>Every course's deadlines in one queue, ordered by what to start first, each with a line on why, and this week's announcements below.</p>
                     </div>
                 </div>
 
@@ -409,38 +326,18 @@
                     <div class="shot">
                         <img src="ss4.png?v=4" width="578" height="532" alt="Kandue at the top of the Canvas left navigation with a red deadline badge, above Dashboard" loading="lazy" decoding="async">
                         <h4>In the Canvas nav</h4>
-                        <p>One click from the Canvas nav, and a badge on the toolbar button counting what's due.</p>
+                        <p>Kandue sits in Canvas's left menu, with a badge counting what's due.</p>
                     </div>
                 </div>
+                <p class="sub" style="margin-top: 1rem;">Captures use fictional courses and invented instructors.</p>
             </section>
 
             <section class="section">
-                <h3>Install</h3>
-                <div class="steps">
-                    <div class="step">
-                        <h4><span class="step-badge">1</span> Add to Chrome</h4>
-                        <ol>
-                            <li>Open the <a href="https://chromewebstore.google.com/detail/plodbfednbjngcmckbcilgpkhgijgado">Kandue for Students listing</a> on the Chrome Web Store.</li>
-                            <li>Click <strong>Add to Chrome</strong> and confirm.</li>
-                            <li>Open Canvas. Kandue appears in the left nav, and the toolbar button opens the panel on any tab.</li>
-                        </ol>
-                    </div>
-                    <div class="step">
-                        <h4><span class="step-badge">2</span> Connect Canvas</h4>
-                        <ol>
-                            <li>On any Canvas page, open Kandue and let Settings auto-detect your Canvas instance.</li>
-                            <li>That's the whole setup. Deadlines and priorities work immediately.</li>
-                        </ol>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h3>Requirements</h3>
+                <h3>Get started</h3>
                 <ul class="req">
-                    <li>Google Chrome or a Chromium-based browser</li>
-                    <li>An active Canvas LMS account (your school's Canvas)</li>
-                    <li>For practice quizzes only: a desktop Chrome that can run its built-in AI model (Chrome 138+ on Windows, macOS or Linux, with enough free disk space and memory). Kandue tells you in Settings whether yours can. Deadlines and priorities work on any Chrome.</li>
+                    <li>Desktop Chrome, or a Chromium-based browser. Extensions don't run on phones.</li>
+                    <li><span><a href="https://chromewebstore.google.com/detail/plodbfednbjngcmckbcilgpkhgijgado">Add to Chrome</a>, open Canvas, and let Settings detect your school's Canvas. There is no Kandue account to create.</span></li>
+                    <li>Quizzes, summaries and translations need desktop Chrome 138+ with about 22GB free disk, and 16GB of RAM or a GPU with more than 4GB of video memory. Deadlines work on any Chrome.</li>
                 </ul>
             </section>
 
@@ -449,39 +346,35 @@
                 <div class="faq">
                     <details>
                         <summary>Does it work with my school's Canvas?</summary>
-                        <p>If your Canvas lives on a <code>.edu</code> address or on <code>instructure.com</code>, yes, Kandue detects it automatically. If your school uses its own domain, you can enter it in Settings and grant access to that one site. Kandue works with the login you already have, so there's no separate account and no API key to request.</p>
-                    </details>
-                    <details>
-                        <summary>Do I have to give it my Canvas password?</summary>
-                        <p>No, and there is no way to. Kandue reads Canvas through your browser's existing logged-in session, the same way the Canvas site itself does. It never sees your password, and there's no API key to generate.</p>
+                        <p>On a <code>.edu</code> address or <code>instructure.com</code>, automatically. On your school's own domain, enter it in Settings and allow that one site. It uses the login you already have: no password, no API key.</p>
                     </details>
                     <details>
                         <summary>Where does my coursework go?</summary>
-                        <p>Nowhere. It's read from your school's Canvas into your browser and stays there. There is no Kandue server and no account to create, because the extension is the whole product. The AI features run on a model inside Chrome, on your own computer, so even those send nothing. Full detail in the <a href="privacy.html">privacy policy</a>.</p>
+                        <p>It is read from your school's Canvas into your browser and stays there. There is no account and no Kandue server, and the AI runs inside Chrome on your computer. See the <a href="privacy.html">privacy policy</a>.</p>
+                    </details>
+                    <details>
+                        <summary>Does it change anything on Canvas?</summary>
+                        <p>Not unless you turn on write-back in Settings. Then it writes one thing: an assignment's done state, which it keeps in step with your Canvas planner. It never submits work.</p>
                     </details>
                     <details>
                         <summary>Is the practice quiz cheating?</summary>
-                        <p>No, and it can't become that. Questions come only from learning material: a syllabus, an assignment description, or the page you're reading. The code never calls the Canvas endpoint that holds real quiz questions, so there is nothing to point it at. It writes practice questions on the subject for you to test yourself against.</p>
-                    </details>
-                    <details>
-                        <summary>Canvas has its own AI study tools now. How is this different?</summary>
-                        <p>Instructure sells AI-generated flashcards and practice quizzes, but only in its top Canvas tier, so having them is a purchase your school either made or didn't, and not something you can turn on. Kandue's practice quizzes work whatever tier your school is on, they are written on your own computer rather than on a vendor's servers, and they cost nothing.</p>
+                        <p>It is built for studying: it quizzes you on a syllabus, an assignment description or the page you're reading, and never fetches a Canvas quiz's questions. Your course's rules on outside tools still apply.</p>
                     </details>
                     <details>
                         <summary>Can my school or instructor tell I'm using it?</summary>
-                        <p>Kandue makes the same kind of requests to Canvas that your browser already makes when you use the site, so there is no Kandue-specific reporting. It sends nothing to us, because there's nowhere to send it, and it never writes to Canvas either.</p>
+                        <p>It reads Canvas with the same kind of requests your browser makes when you use the site, and reports nothing to anyone. With write-back on, the done marks it writes appear on your own Canvas planner.</p>
+                    </details>
+                    <details>
+                        <summary>Canvas has its own AI study tools. How is this different?</summary>
+                        <p>Instructure's AI flashcards and quizzes come only with its top Canvas tier, which your school either bought or didn't. Kandue's quizzes work on any tier, are written on your own computer, and are free.</p>
                     </details>
                     <details>
                         <summary>Why don't I see the quiz or summarize buttons?</summary>
-                        <p>Those run on Chrome's built-in AI model, which needs a desktop Chrome with room to store the model (roughly 22GB free space, and either a 4GB+ graphics card or 16GB of RAM). Kandue checks and tells you in Settings, and hides the buttons instead of showing ones that fail. Your deadlines and priorities work on any Chrome regardless.</p>
+                        <p>Your Chrome can't run its built-in AI (requirements under Get started). Kandue hides the buttons rather than showing ones that fail, and Settings says why.</p>
                     </details>
                     <details>
-                        <summary>Does it work on my phone?</summary>
-                        <p>Not yet. Chrome extensions don't run on Chrome for Android or iOS, and Kandue is a desktop browser extension.</p>
-                    </details>
-                    <details>
-                        <summary>Is it free? What's the catch?</summary>
-                        <p>Free, with no paid tier and no ads. There's no server to run and no inference to pay for, which is exactly why it can stay that way.</p>
+                        <summary>Is it free?</summary>
+                        <p>Yes, with no paid tier and no ads. There is no server to run and no inference to pay for.</p>
                     </details>
                 </div>
             </section>
@@ -500,50 +393,12 @@
 
             <section class="section">
                 <h3>Canvas counts the ungraded. It doesn't say which ones are yours.</h3>
-                <p class="sub">A course-wide "22 need grading" tells a TA nothing about which of them are theirs to grade, or about the student who has been waiting eleven days. Kandue for Graders reads the course over your own Canvas session and answers both: one queue of every assignment with students of yours still to grade, longest wait first, and behind each assignment the worklist for your block &mdash; the students you are the one grading.</p>
-                <div class="features">
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg></div>
-                        <h4>Longest wait first</h4>
-                        <p>How many you have to grade, in a ring split at seven days since the due date. When other graders hold work too, a You / Everyone switch shows the course's count and each grader's backlog by wait. Below it, one row per assignment, longest wait first, with a bar.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <h4>Your block, into SpeedGrader</h4>
-                        <p>Behind each assignment, every student in your block: to grade, graded with the score, resubmitted since grading, late, excused, or nothing handed in. Each row opens that student in SpeedGrader.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"></path><circle cx="7" cy="6" r="1.6" fill="currentColor"></circle><circle cx="14" cy="12" r="1.6" fill="currentColor"></circle><circle cx="10" cy="18" r="1.6" fill="currentColor"></circle></svg></div>
-                        <h4>Who grades whom, read back</h4>
-                        <p>The split comes from the grades already entered, or Canvas groups named for the TAs, or you set it by hand, or the Google Sheet your team keeps &mdash; that one only after you paste its link and allow the site, and it is read over your own Google session. Whichever it is, it's checked against every grade on the assignment, and Settings shows each grader's block so you can read it against what the other graders think.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="15" y1="3" x2="15" y2="21"></line></svg></div>
-                        <h4>Beside SpeedGrader, not over it</h4>
-                        <p>Opens docked in Chrome's side panel, so the queue sits next to SpeedGrader while you grade. Settings can move it over the page or into its own window. On Canvas there's a Grading item in the left nav that opens it.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
-                        <h4>A badge for your block</h4>
-                        <p>The toolbar badge counts the submissions in your block still waiting on a grade, brought up to date every half hour.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                        <h4>Read-only, and no server</h4>
-                        <p>Every request is a read: it enters no grade, posts no comment and sends no message, so grading stays in SpeedGrader where the posting policy is visible. The course, its students and their submissions are read into the panel, and the last reading stays on your own device so the queue is there when you open it. There is no Kandue account and no backend of ours to send any of it to, and nothing is measured.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h3>See it</h3>
-                <p class="sub">Fictional course, invented students: nothing in these captures comes from a real Canvas course.</p>
-
+                <p class="sub">A course-wide "22 need grading" says nothing about which are yours, or who has waited eleven days. Kandue for Graders lists every assignment with students of yours still to grade, longest wait first, docked beside SpeedGrader. It only reads: it sends no grade, comment or message.</p>
                 <div class="shot-feature">
                     <div class="shot-media"><img src="ss-grading-queue.png?v=22" width="560" height="806" alt="The Kandue for Graders queue: a You · 17 / Everyone · 44 switch beside the Report link, 17 to grade in a ring split into 2 at 7+ days since due and 15 under 7 days with a Next to grade button naming Rosa Mendes on HW0: Warm-up, then rows for HW0, HW1 and Lab 2, each title followed by when it was due (Due 11 days ago, in red, for HW0), with a bar of one block per submission and a line such as &quot;2 of your 8 still to grade · 6 graded&quot;, and Not due yet and Done buttons under the list" loading="lazy" decoding="async"></div>
                     <div class="shot-copy">
                         <h4>Who is waiting on you</h4>
-                        <p>Every assignment with students of yours still to grade, the longest wait at the top. Each row says how long the first of your students has waited and how many of them are still to grade, with a bar for your block.</p>
+                        <p>How long the first of your students has waited on each assignment, and how many are still to grade.</p>
                     </div>
                 </div>
 
@@ -559,35 +414,15 @@
                         <p>The split every TA is actually using, checked against every grade already entered, with the disagreements named.</p>
                     </div>
                 </div>
+                <p class="sub" style="margin-top: 1rem;">Captures use a fictional course and invented students.</p>
             </section>
 
             <section class="section">
-                <h3>Install</h3>
-                <div class="steps">
-                    <div class="step">
-                        <h4><span class="step-badge">1</span> Add to Chrome</h4>
-                        <ol>
-                            <li>Open the <a href="https://chromewebstore.google.com/detail/jimgnnnfaicmhhjlpgdejbnajbhjokdp">Kandue for Graders listing</a> on the Chrome Web Store.</li>
-                            <li>Click <strong>Add to Chrome</strong> and confirm.</li>
-                            <li>Open a Canvas course you TA or teach. The toolbar button opens the panel, and Canvas's left nav gains a Grading item.</li>
-                        </ol>
-                    </div>
-                    <div class="step">
-                        <h4><span class="step-badge">2</span> Pick the course</h4>
-                        <ol>
-                            <li>Open Settings, let it detect your Canvas address, and choose the course.</li>
-                            <li>Leave the split on <strong>Read from the grades on Canvas</strong> unless your team keeps a sheet. Settings shows you the block it read, so you can check it before trusting the queue.</li>
-                        </ol>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h3>Requirements</h3>
+                <h3>Get started</h3>
                 <ul class="req">
-                    <li>Desktop Google Chrome, or a Chromium-based browser. Chrome extensions don't run on Chrome for Android or iOS.</li>
-                    <li>An active TA or teacher enrollment in the course. Kandue lists only the courses Canvas has you grading, so the ones you are just taking never show up in it.</li>
-                    <li>Nothing from the other TAs. It works out who grades whom from what your course already has, so no one else has to install it or change how they work.</li>
+                    <li>Desktop Chrome, or a Chromium-based browser, and a TA or teacher enrollment in the course. Courses you are taking don't show up.</li>
+                    <li><span><a href="https://chromewebstore.google.com/detail/jimgnnnfaicmhhjlpgdejbnajbhjokdp">Add to Chrome</a>, then open the panel from the toolbar button or the Kandue Graders item in Canvas's left menu. In Settings, choose the course and check which students it puts in your block.</span></li>
+                    <li>The toolbar badge counts your block's submissions still to grade, updated every half hour.</li>
                 </ul>
             </section>
 
@@ -596,23 +431,23 @@
                 <div class="faq">
                     <details>
                         <summary>Can it enter a grade by mistake?</summary>
-                        <p>No. Every request it makes to Canvas is a read. There is no code path that enters a grade, posts a comment or sends a message, so the worst it can do is show you a stale queue. Grading happens in SpeedGrader, where your course's posting policy still applies.</p>
+                        <p>No. Every request it makes is a read, so the worst it can show is a stale queue. Grading happens in SpeedGrader, under your course's posting policy.</p>
                     </details>
                     <details>
-                        <summary>Do the other TAs have to install it too?</summary>
-                        <p>No. It works out who grades whom from what is already on Canvas: the grades entered so far, Canvas groups named for the TAs, or a sheet your team keeps if you point it at one. Nobody else has to change anything.</p>
+                        <summary>Do the other TAs have to install it?</summary>
+                        <p>No. Who grades whom comes from a rule you set over the roster, Canvas groups named for the TAs, or the grades already entered. Nobody else has to change anything.</p>
                     </details>
                     <details>
                         <summary>What if it gets my block wrong?</summary>
-                        <p>It checks whatever split it read against every grade already entered on the assignment and tells you how many rows agree, so a wrong block shows up as a disagreement rather than a quietly short queue. A student in your block that another grader already graded is flagged in the worklist. You can also set the split by hand in Settings.</p>
+                        <p>It checks the split against every grade already entered and shows how many agree, so a wrong block shows up as a disagreement, not a short queue. Change the split in Settings.</p>
                     </details>
                     <details>
                         <summary>I'm the instructor, not a TA. Does it work?</summary>
-                        <p>Yes. It reads your teacher enrollments the same way it reads TA ones. With one grader on the course, your block is the whole class.</p>
+                        <p>Yes. With one grader on the course, your block is the whole class.</p>
                     </details>
                     <details>
                         <summary>Where does the course data go?</summary>
-                        <p>Into the panel and nowhere else. Students, submissions and grades are read from your school's Canvas over your own session and held while the panel is open, plus the last reading kept on your device so the queue is on screen when you open it. There's no account and no backend. Full detail in the <a href="privacy-graders.html">privacy policy for graders</a>.</p>
+                        <p>Into the panel, with the last reading kept on your device so the queue shows at once. There is no account and no Kandue server. See the <a href="privacy-graders.html">privacy policy for graders</a>.</p>
                     </details>
                 </div>
             </section>

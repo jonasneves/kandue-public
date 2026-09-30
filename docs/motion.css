@@ -36,10 +36,8 @@
    which on a page this long means most of them animating out of sight. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .feature,
     .shot-feature,
     .shot,
-    .step,
     .faq details {
       animation: kd-rise 1ms var(--rise) both;
       animation-timeline: view();
