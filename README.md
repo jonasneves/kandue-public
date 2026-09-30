@@ -1,8 +1,13 @@
 # Kandue
 
-Every Canvas deadline in one panel. A Chrome extension for students on Canvas LMS: assignments from every course in one list, ranked by what needs you first, with practice quizzes and reading aids from Chrome's built-in AI on your own machine. No account to create and no server of its own, so your coursework stays in the browser.
+Two Chrome extensions for Canvas LMS. Both read the Canvas session you are already signed in to, with no account to create and no server of their own.
 
-[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/plodbfednbjngcmckbcilgpkhgijgado) · [Site](https://kandue.app/) · [Privacy policy](https://kandue.app/privacy.html)
+| | What it does | |
+|---|---|---|
+| **Kandue for Students** | Every deadline across your courses in one panel, ranked by what needs you first, with practice quizzes and reading aids from Chrome's built-in AI on your own machine. | [Install](https://chromewebstore.google.com/detail/plodbfednbjngcmckbcilgpkhgijgado) · [Privacy](https://kandue.app/privacy.html) |
+| **Kandue for Graders** | Which students still wait on a grade, longest wait first, each a click from SpeedGrader. | [Install](https://chromewebstore.google.com/detail/jimgnnnfaicmhhjlpgdejbnajbhjokdp) · [Privacy](https://kandue.app/privacy-graders.html) |
+
+[kandue.app](https://kandue.app/)
 
 ## Feedback and requests
 
@@ -15,6 +20,6 @@ Every Canvas deadline in one panel. A Chrome extension for students on Canvas LM
 | `docs/` | The site, served by GitHub Pages at kandue.app |
 | `.github/ISSUE_TEMPLATE/` | The issue forms |
 
-The extension's source is not published here.
+The extensions' source is not published here.
 
 Kandue is an independent project, not affiliated with or endorsed by Instructure. MIT license.
