@@ -11,7 +11,7 @@ Two Chrome extensions for Canvas LMS. Both read the Canvas session you are alrea
 
 ## Feedback and requests
 
-[Send feedback](https://kandue.app/feedback.html) from the site, or [open an issue](https://github.com/nevescloud/kandue-public/issues/new/choose) here. The site's form fills the issue in for you and you press Create. Either way takes a free GitHub account, and issues are public, so leave out your name, email, and school login.
+[Send feedback](https://kandue.app/feedback.html) from the site, or [open an issue](https://github.com/jonasneves/kandue-public/issues/new/choose) here. The site's form fills the issue in for you and you press Create. Either way takes a free GitHub account, and issues are public, so leave out your name, email, and school login.
 
 ## This repository
 
